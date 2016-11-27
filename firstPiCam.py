@@ -3,11 +3,12 @@ from picamera.array import PiRGBArray
 import picamera
 import cv2
 import time
+import io
 
 # retourne une image provenant de la picamera
 def getImage():
 	camera = picamera.PiCamera()
-	camera.resolution = (1920, 1088)
+	camera.resolution = (320, 240)
 	rawCapture = PiRGBArray(camera)
 
 	time.sleep(0.1)
